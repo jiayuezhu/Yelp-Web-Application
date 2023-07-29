@@ -47,8 +47,6 @@ app.put("/api/v1/restaurants/:id", async(req, res) => {
     }
 });
 
-app.use(cors());
-app.use(express.json());
 app.get("/api/v1/restaurants", async(req, res) => {
     try {
         const queryResults = await db.query("SELECT * FROM restaurants;");
